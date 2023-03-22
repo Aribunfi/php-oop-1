@@ -8,6 +8,12 @@ public $author;
 
 echo $movie->getFullDescription();
 
+function __construct(
+  string $title,
+  string $abstract,
+  string $author
+)
+
 $movies = [
     new movie[
       $title: "Fuga per la vittoria",
