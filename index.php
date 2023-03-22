@@ -1,5 +1,23 @@
 <?php
-require_once __DIR__ . "movies.php";
+
+class Movie {
+public $title;
+public $abstract;
+public $author;
+}
+
+echo $movie->getFullDescription();
+
+$movies = [
+    new movie[
+      $title: "Fuga per la vittoria",
+      $abstract: "lorem ipsum dolor sit"
+      $author: "John Uston"
+    ],
+    new movie("Matilda sei mitica", "abstract", "Danny De Vito")
+
+];
+
 ?>
 
 <!DOCTYPE html>
