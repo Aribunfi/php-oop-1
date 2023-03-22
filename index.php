@@ -1,25 +1,22 @@
 <?php
 
 class Movie {
-public $title;
-public $abstract;
-public $author;
+  public $title;
+  public $abstract;
+  public $author;
+
+  function __construct(
+    string $title,
+    string $abstract,
+    string $author
+  )
+
+
 }
 
-echo $movie->getFullDescription();
-
-function __construct(
-  string $title,
-  string $abstract,
-  string $author
-)
-
 $movies = [
-    new movie[
-      $title: "Fuga per la vittoria",
-      $abstract: "lorem ipsum dolor sit"
-      $author: "John Uston"
-    ],
+    new Movie ("Fuga per la vittoria", "lorem ipsum dolor sit", "John Uston"),
+     
     new movie("Matilda sei mitica", "abstract", "Danny De Vito")
 
 ];
