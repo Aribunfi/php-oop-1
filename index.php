@@ -11,8 +11,8 @@ class Movie {
     string $_author
   ) {
     $this->setTitle($_title);
-    $this->poster = $_poster
-    $this->author = $_author
+    $this->setPoster($_poster);
+    $this->setAuthor($_author);
   }
 
   public function setTitle($title) {
