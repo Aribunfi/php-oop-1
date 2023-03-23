@@ -16,10 +16,19 @@ class Movie {
   }
 
   public function setTitle($title) {
-    if(!is_string($title)|| $$title === "") return false;
+    if(!is_string($title)|| $title === "") return false;
     $this->title = $title;
   }
 
+  public function setPoster($poster) {
+    if(!is_string($poster)|| $$poster === "") return false;
+    $this->poster = $poster;
+  }
+
+  public function setAuthor($author) {
+    if(!is_string($author)|| $$author === "") return false;
+    $this->author = $author;
+  }
 
 }
 
