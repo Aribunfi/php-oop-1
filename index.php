@@ -2,14 +2,18 @@
 
 class Movie {
   public $title;
-  public $abstract;
+  public $poster;
   public $author;
 
   function __construct(
-    string $title,
-    string $abstract,
-    string $author
-  )
+    string $_title,
+    string $_poster,
+    string $_author
+  ) {
+$this->title = $_title
+$this->poster = $_poster
+$this->author = $_author
+  }
 
 
 }
