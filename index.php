@@ -54,12 +54,12 @@ $movies = [
   </head>
 
   <body>
-    <div class="container">
+    <div class="container my-5">
         <h1>Movies</h1>
         <div class="row-cols-3">
         <?php foreach($movies as $movie) : ?>
             <div class="col">
-              <div class="card">
+              <div class="card my-5">
                 <img src="<?= $movie->poster ?>" class="card-img-top" alt="">
                 
                 <h2 class="card-title"><?= $movie->title ?></h2>
