@@ -10,7 +10,7 @@ class Movie {
     string $_poster,
     string $_author
   ) {
-    $this->title = $_title
+    $this->setTitle($_title);
     $this->poster = $_poster
     $this->author = $_author
   }
