@@ -21,7 +21,7 @@ class Movie {
   }
 
   public function setPoster($poster) {
-    if(!is_string($poster)|| $$poster === "") return false;
+    if(!is_string($poster)|| $poster === "") return false;
     $this->poster = $poster;
   }
 
@@ -32,16 +32,18 @@ class Movie {
 
 }
 
-$movies = [
-    new Movie ("Fuga per la vittoria", "lorem ipsum dolor sit", "John Uston"),
-     
-    new movie("Matilda sei mitica", "abstract", "Danny De Vito")
 
-];
+
+$movies = [
+    new Movie ("Fuga per la vittoria", "https://portaledelnazismo.altervista.org/wp-content/uploads/2015/10/1b17.jpg", "John Uston"),
+     
+    new Movie("Matilda sei mitica", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxuGhQmY5OmEwHeZBplYNtlzhkT09O1x50Cg&usqp=CAU", "Danny De Vito")
+]
+
 
 ?>
 
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -50,12 +52,22 @@ $movies = [
   <title>MOVIES</title>
 </head>
 <body>
+  <div class="container">
+      <h1>Movies</h1>
+      <div class="row-cols-3">
+      <?php foreach($movies as $movie) : ?>
+          <div class="col">
+            <div class="card">
+              <img src="<? $movie->poster ?>" class="card-img-top" alt="">
+            <h2 class="card-title"><?= $movie->title ?></h2>
+                
+               <h3><? $movie->author ?></h3>
+                <hr>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </div>
+  </div>
 
-<?php foreach($movies as $movie) : ?>
-  <h3><?= $movie->title ?></h3>
-  <p><?= $movie->getAbstract(100) ?></p>
-  <small><? $movie->author ?></small>
-  <hr>
-  <?php endforeach; ?>
 </body>
 </html>
