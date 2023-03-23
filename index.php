@@ -10,9 +10,14 @@ class Movie {
     string $_poster,
     string $_author
   ) {
-$this->title = $_title
-$this->poster = $_poster
-$this->author = $_author
+    $this->title = $_title
+    $this->poster = $_poster
+    $this->author = $_author
+  }
+
+  public function setTitle($title) {
+    if(!is_string($title)|| $$title === "") return false;
+    $this->title = $title;
   }
 
 
